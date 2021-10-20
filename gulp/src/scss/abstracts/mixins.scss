@@ -66,3 +66,28 @@
 @mixin border-bottom {
   border-bottom: 1px solid $color-border;
 }
+
+@mixin bordered {
+  border: 1px solid $color-border;
+  box-shadow: 1px 3px 3px rgba(62, 63, 64, 0.1);
+  border-radius: 8px;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absVerticalCenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin absHorizontalCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

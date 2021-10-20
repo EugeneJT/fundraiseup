@@ -29,3 +29,37 @@ body {
         max-width: 1224px;
     }
 }
+
+ul {
+    list-style: none;
+}
+
+.section-bordered {
+    border: 1px solid $color-border;
+    box-shadow: 1px 3px 3px rgba(62, 63, 64, 0.1);
+    border-radius: 8px;
+
+    &__item {
+
+        &:first-child {
+            padding: 28px 32px;
+            background-color: $color-background-primary;
+            border-radius: 8px 8px 0 0;
+
+            @include mob-down {
+                padding: 28px 16px;
+            }
+        }
+
+        &:last-child {
+            padding: 16px 32px;
+            background: $color-background-tertiary;
+            border-top: 1px solid $color-border;
+            border-radius: 0 0 8px 8px;
+
+            @include mob-down {
+                padding: 28px 16px;
+            }
+        }
+    }
+}

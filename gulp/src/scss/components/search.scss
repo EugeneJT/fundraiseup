@@ -1,0 +1,20 @@
+.search {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 40px;
+
+    @include tablet-down {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__item {
+        position: relative;
+
+        &:first-child {
+            width: 100%;
+            max-width: 336px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../assets/images/sprite-icons.png) no-repeat;
+
+    &--search {
+        @include absVerticalCenter;
+        background-position: -10px -10px;
+        left: 16px;
+    }
+
+    &--arrow {
+        background-position: -38px -10px;
+    }
+}
