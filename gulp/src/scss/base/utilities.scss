@@ -1,0 +1,27 @@
+.u-push {
+    @each $name, $size in $push-sizes {
+      &-size-#{$name}:not(:last-child) {
+        @each $screen, $value in $size {
+          @if $screen == 'desktop' {
+            margin-bottom: $value;
+          }
+  
+          @include tablet-down {
+            @if $screen == 'tablet' {
+              margin-bottom: $value;
+            }
+          }
+  
+          @include mob-down {
+            @if $screen == 'mobile' {
+              margin-bottom: $value;
+            }
+          }
+        }
+      }
+    }
+}
+
+.u-align-center {
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    color: $color-text-primary;
+    background-color: $color-background-secondary;
+}
+
+.container {
+    max-width: 936px;
+    margin: auto;
+    padding: 0 16px;
+
+    &--wide {
+        max-width: 1224px;
+    }
+}

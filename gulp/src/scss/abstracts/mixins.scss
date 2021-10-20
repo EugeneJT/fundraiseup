@@ -1,0 +1,68 @@
+@mixin laptop-down {
+  @media screen and (max-width: #{$laptop-width}) {
+    @content;
+  }
+}
+
+@mixin big-tablet-down {
+  @media screen and (max-width: #{$big-tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media screen and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin mob-down {
+  @media screen and (max-width: #{$mob-width}) {
+    @content;
+  }
+}
+
+@mixin mob-mini-down {
+  @media screen and (max-width: #{$mob-mini-width}) {
+    @content;
+  }
+}
+
+@mixin laptop-up {
+  @media screen and (min-width: #{$laptop-width + 0.11px}) {
+    @content;
+  }
+}
+
+@mixin big-tablet-up {
+  @media screen and (min-width: #{$big-tablet-width + 0.11px}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media screen and (min-width: #{$tablet-width + 0.11px}) {
+    @content;
+  }
+}
+
+@mixin mob-up {
+  @media screen and (min-width: #{$mob-width + 0.11px}) {
+    @content;
+  }
+}
+
+@mixin margin-b($margin) {
+  &:not(:last-child) {
+    margin-bottom: $margin;
+  }
+}
+
+@mixin setLineHeight($size) {
+  font-size: $size;
+  line-height: $size + 8;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid $color-border;
+}

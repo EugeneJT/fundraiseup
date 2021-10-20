@@ -1,0 +1,36 @@
+/* Media queries */
+
+$laptop-width: 1336px;
+$big-tablet-width: 1024px;
+$tablet-width: 768px;
+$mob-width: 480px;
+$mob-mini-width: 370px;
+
+/* Colors */
+
+$color-text-primary: #2F2F30;
+$color-text-hover: #3cc6a7;
+$color-border: #DBDCDE;
+$color-background-primary: #ffffff;
+$color-background-secondary: #E5E5E5;
+$color-background-tertiary: #fafafa;
+$color-background-quaternary: #fffbec;
+
+/* Other variables */
+
+$title-sizes: (
+        xs: (
+                desktop: 14),
+        m: (
+                desktop: 24px,
+                tablet: 22px,
+                mobile: 20px)
+);
+
+$push-sizes: (
+        xxs: (
+                desktop: 16px),
+        xs: (
+                desktop: 24px,
+                tablet: 16px)
+);

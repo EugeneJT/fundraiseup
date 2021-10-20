@@ -1,0 +1,31 @@
+.title {
+  @each $name, $size in $title-sizes {
+    &-size-#{$name} {
+      @each $screen, $value in $size {
+        @if $screen == 'desktop' {
+          @include setLineHeight($value);
+        }
+
+        @include tablet-down {
+          @if $screen == 'tablet' {
+            @include setLineHeight($value);
+          }
+        }
+
+        @include mob-down {
+          @if $screen == 'mobile' {
+            @include setLineHeight($value);
+          }
+        }
+      }
+    }
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
