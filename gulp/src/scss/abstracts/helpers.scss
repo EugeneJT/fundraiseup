@@ -9,19 +9,24 @@ $mob-mini-width: 370px;
 /* Colors */
 
 $color-text-primary: #2F2F30;
-$color-highlight: #2EB670;
+$color-text-highlight-dark: #00A651;
+$color-text-highlight-light: #6c6d6f;
 $color-text-hover: #3cc6a7;
 $color-border: #dbdcde;
 $color-background-primary: #ffffff;
 $color-background-secondary: #e5e5e5;
 $color-background-tertiary: #fafafa;
 $color-background-quaternary: #fffbec;
+$color-background-aside: #f3f3f3;
+$color-input-highlight: #2EB670;
+$color-link: #6665DD;
+
 
 /* Other variables */
 
 $title-sizes: (
         xs: (
-                desktop: 14),
+                desktop: 14px),
         m: (
                 desktop: 24px,
                 tablet: 22px,
@@ -29,6 +34,8 @@ $title-sizes: (
 );
 
 $push-sizes: (
+        xxxs: (
+                desktop: 4px),
         xxs: (
                 desktop: 16px),
         xs: (

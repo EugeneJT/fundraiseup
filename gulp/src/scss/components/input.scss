@@ -40,7 +40,7 @@
             top: -3px;
             width: 24px;
             height: 24px;
-            border: 1px solid $color-highlight;
+            border: 1px solid $color-input-highlight;
             background: #FFF;
             border-radius: .2em;
             box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 rgba(46, 182, 112, .2);
@@ -55,7 +55,7 @@
             top: 9px;
             left: 6px;
             font-size: 16px;
-            color: $color-highlight;
+            color: $color-input-highlight;
             line-height: 0;
             transition: all .2s;
         }
@@ -75,7 +75,7 @@
         &:disabled:not(:checked) + label:before,
         &:disabled:checked + label:before {
             box-shadow: none;
-            border-color: $color-highlight;
+            border-color: $color-input-highlight;
             background-color: $color-background-tertiary;
         }
 
@@ -84,13 +84,20 @@
         }
 
         &:disabled + label {
-            color: $color-highlight;
+            color: $color-input-highlight;
         }
 
         /* Accessibility */
         &:checked:focus + label:before,
         &:not(:checked):focus + label:before {
             box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 6px rgba(46, 182, 112, .2);
+        }
+
+        & + label {
+            transition: all .2s ease;
+            &:hover {
+                color: $color-text-hover;
+            }
         }
     }
 

@@ -1,0 +1,56 @@
+.request {
+    display: flex;
+
+    @include mob-down {
+        flex-direction: column;
+    }
+    
+    &__item {
+        overflow-x: hidden;
+
+        @include mob-down {
+            display: flex;
+            justify-content: space-between;
+
+        }
+        &:not(:last-child) {
+            border-right: 1px solid $color-border;
+            padding-right: 34px;
+            margin-right: 32px;
+
+            @include mob-down {
+                border-right: none;
+                border-bottom: 1px solid $color-border;
+                padding: 0 0 34px;
+                margin: 0 0 32px;
+            }
+        }
+
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            position: relative;
+            color: $color-link;
+            text-decoration: none;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 1px;
+                background-color: $color-link;
+                transition: all .2s ease;
+            }
+
+            &:hover {
+                &::after {
+                    transform: translateX(-100%);
+                }
+            }
+        }
+    }
+}

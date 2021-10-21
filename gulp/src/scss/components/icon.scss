@@ -2,15 +2,43 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-    background: url(../assets/images/sprite-icons.png) no-repeat;
+    background: url(../assets/images/sprite-icons.svg) no-repeat;
 
     &--search {
         @include absVerticalCenter;
-        background-position: -10px -10px;
         left: 16px;
+        background-position: 0 0;
     }
 
     &--arrow {
-        background-position: -38px -10px;
+        background-position: -30px 0;
+    }
+
+    &--repeat {
+        background-position: 0 -30px;
+    }
+
+    &--wallet {
+        background-position: -30px -30px;
+    }
+
+    &--calendar {
+        background-position: -60px -30px;
+    }
+
+    &--cancel {
+        background-position: -90px -30px;
+    }
+
+    &--dollar {
+        background-position: -60px 0;
+    }
+
+    &--copy {
+        background-position: -90px 0;
+    }
+
+    &--success {
+        background-position: -120px 0;
     }
 }

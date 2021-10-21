@@ -22,16 +22,45 @@ body {
 
 .container {
     max-width: 936px;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     padding: 0 16px;
 
     &--wide {
         max-width: 1224px;
     }
+
+    .container {
+        padding: 0;
+    }
 }
 
 ul {
     list-style: none;
+}
+
+.push {
+    @each $name, $size in $push-sizes {
+        &-size-#{$name}:not(:last-child) {
+            @each $screen, $value in $size {
+                @if $screen == 'desktop' {
+                    margin-bottom: $value;
+                }
+
+                @include tablet-down {
+                    @if $screen == 'tablet' {
+                    margin-bottom: $value;
+                    }
+                }
+
+                @include mob-down {
+                    @if $screen == 'mobile' {
+                    margin-bottom: $value;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .section-bordered {
@@ -61,5 +90,32 @@ ul {
                 padding: 28px 16px;
             }
         }
+    }
+}
+
+.aside {
+    position: sticky;
+    top: 24px;
+    max-width: 264px;
+    background-color: $color-background-primary;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+
+    @include tablet-down {
+        position: relative;
+        top: 0;
+        max-width: none;
+        width: 100%;
+    }
+}
+
+.main {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    @include tablet-down {
+        flex-direction: column-reverse;
+        align-items: center;
     }
 }

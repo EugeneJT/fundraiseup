@@ -1,4 +1,49 @@
 extends layout/layout
 
 block content
-    main.main
+    main.main.container.container--wide
+        section.container
+            .section-bordered
+                .section-bordered__item.user-info
+                    .user-info__item
+                        .user-info__title.push-size-xxxs
+                            span.icon.icon--dollar
+                            h3.title-size-xs Donation
+                        .user-info__sum
+                            p.title-size-m.u-color-highlight-dark €20.60 EUR   
+                            p.u-color-highlight-light ≈ $22.22 USD     
+                    .user-info__item
+                        p.u-color-highlight-light.push-size-xxxs ID 
+                        .u-d-flex.push-size-xxxs.u-pointer
+                            h3.title-size-xs DYHY694Y
+                            span.icon.icon--copy
+
+                .section-bordered__item
+                    .request
+                        .request__item
+                            h4.title-size-xs.u-color-highlight-light.push-size-xxxs Status
+                            .u-d-flex
+                                span.icon.icon--success
+                                p Success
+                        .request__item
+                            h4.title-size-xs.u-color-highlight-light.push-size-xxxs Supporter
+                            a(class="request__link" href="mailto:#" target="_blank") Charlotte&nbsp;Ann
+                        .request__item
+                            h4.title-size-xs.u-color-highlight-light.push-size-xxxs Status
+                            a(class="request__link" href="#" target="_blank") Workout for&nbsp;water
+
+        aside.aside
+            ul.menu 
+                li.menu__item
+                    span.icon.icon--repeat
+                    p Change Amount
+                li.menu__item
+                    span.icon.icon--wallet
+                    p Change Payment Method
+                li.menu__item.menu__item--active
+                    span.icon.icon--calendar
+                    p Change Date
+                li.menu__item
+                    span.icon.icon--cancel
+                    p Cancel Recurring
+        

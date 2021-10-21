@@ -1,0 +1,23 @@
+.menu {
+    &__item {
+        position: relative;
+        display: flex;
+        gap: 8px;
+        padding: 12px 16px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all .2s ease;
+
+        &:not(:last-child) {
+            @include border-bottom;
+        }
+
+        &:hover {
+            background-color: $color-background-aside;
+        }
+
+        &--active {
+            background-color: $color-background-aside;
+        }
+    }
+}

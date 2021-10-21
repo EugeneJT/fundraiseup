@@ -25,3 +25,20 @@
 .u-align-center {
     text-align: center;
 }
+
+.u-color-highlight-dark {
+  color: $color-text-highlight-dark;
+}
+
+.u-color-highlight-light {
+  color: $color-text-highlight-light;
+}
+
+.u-d-flex {
+  display: flex;
+  gap: 8px;
+}
+
+.u-pointer {
+  cursor: pointer;
+}
