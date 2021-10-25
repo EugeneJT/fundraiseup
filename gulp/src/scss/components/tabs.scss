@@ -64,53 +64,21 @@
     }
 }
 
-
-#tab-1:checked ~ {
-    .nav-secondary .nav-secondary__label:nth-of-type(1) {
-        @include highlightTabItem;
-    }
-
-    .tab-content .tab-content__item:nth-of-type(1) {
-        @include showTabContent;
-    }
-}
-
-#tab-2:checked ~ {
-    .nav-secondary .nav-secondary__label:nth-of-type(2) {
-        @include highlightTabItem;
-    }
-
-    .tab-content .tab-content__item:nth-of-type(2) {
-        @include showTabContent;
-    }
-}
-
-#tab-3:checked ~ {
-    .nav-secondary .nav-secondary__label:nth-of-type(3) {
-        @include highlightTabItem;
-    }
-
-    .tab-content .tab-content__item:nth-of-type(3) {
-        @include showTabContent;
-    }
-}
-
-#tab-4:checked ~ {
-    .nav-secondary .nav-secondary__label:nth-of-type(4) {
-        @include highlightTabItem;
-    }
-
-    .tab-content .tab-content__item:nth-of-type(4) {
-        @include showTabContent;
-    }
-}
-
-#tab-5:checked ~ {
-    .nav-secondary .nav-secondary__label:nth-of-type(5) {
-        @include highlightTabItem;
-    }
-
-    .tab-content .tab-content__item:nth-of-type(5) {
-        @include showTabContent;
+@for $i from 1 to 6 {
+    #tab-#{$i}:checked ~ {
+        .nav-secondary .nav-secondary__label:nth-of-type(#{$i}) {
+            color: $color-text-highlight-dark;
+            background-color: $color-background-primary;
+            border: 1px solid $color-border;
+            border-bottom: none;
+            z-index: 9;
+        }
+    
+        .tab-content .tab-content__item:nth-of-type(#{$i}) {
+            opacity: 1;
+            height: 100%;
+            visibility: visible; 
+            transform: translateX(0);
+        }
     }
 }

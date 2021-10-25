@@ -3,7 +3,7 @@
     &__item {
         display: flex;
         align-items: center;
-        gap: 16px;
+        
 
         @include mob-down {
             flex-wrap: wrap;
@@ -33,6 +33,7 @@
     &__title {
         text-align: right;
         line-height: 24px;
+        margin-right: 16px;
 
         @include mob-up {
             flex-basis: 124px;
@@ -40,6 +41,7 @@
 
         @include mob-down {
             text-align: center;
+            margin: 0 0 16px;
         }
     }
 

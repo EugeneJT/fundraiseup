@@ -9,12 +9,11 @@
     
     &__title {
         display: flex;
-        gap: 8px;
+        margin-bottom: 8px;
     }
 
     &__sum {
         display: flex;
         align-items: center;
-        gap: 8px;
     }
 }

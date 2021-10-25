@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px 40px;
 
     @include tablet-down {
         flex-direction: column-reverse;
@@ -15,6 +14,11 @@
         &:first-child {
             width: 100%;
             max-width: 336px;
+            margin-right: 40px;
+
+            @include tablet-down {
+                margin: 10px 0 0;
+            }
         }
     }
 }

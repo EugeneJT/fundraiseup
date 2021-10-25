@@ -36,13 +36,27 @@
 
 .u-d-flex {
   display: flex;
-  gap: 8px;
 }
 
 .u-pointer {
   cursor: pointer;
 }
 
-.u-margin-left-xxs {
-  margin-left: 16px;
+.u-margin-left {
+  &-xxxs {
+    margin-left: 8px;
+  }
+  &-xxs {
+    margin-left: 16px;
+  }
+
+  &-xs {
+    margin-left: 24px;
+  } 
+}
+
+.u-margin-right {
+  &-xxxs {
+    margin-right: 8px;
+  }
 }

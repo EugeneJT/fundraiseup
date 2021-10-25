@@ -97,18 +97,3 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
-@mixin highlightTabItem {
-  color: $color-text-highlight-dark;
-  background-color: $color-background-primary;
-  border: 1px solid $color-border;
-  border-bottom: none;
-  z-index: 9;
-}
-
-@mixin showTabContent {
-  opacity: 1;
-  height: 100%;
-  visibility: visible; 
-  transform: translateX(0);
-}
