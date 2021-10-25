@@ -2,8 +2,9 @@
 
 $laptop-width: 1336px;
 $big-tablet-width: 1024px;
+$mid-tablet-width: 960px;
 $tablet-width: 768px;
-$mob-width: 480px;
+$mob-width: 585px;
 $mob-mini-width: 370px;
 
 /* Colors */
@@ -13,6 +14,7 @@ $color-text-highlight-dark: #00A651;
 $color-text-highlight-light: #6c6d6f;
 $color-text-hover: #3cc6a7;
 $color-border: #dbdcde;
+$color-elements-border: #a9abae;
 $color-background-primary: #ffffff;
 $color-background-secondary: #e5e5e5;
 $color-background-tertiary: #fafafa;
@@ -20,7 +22,8 @@ $color-background-quaternary: #fffbec;
 $color-background-aside: #f3f3f3;
 $color-input-highlight: #2EB670;
 $color-link: #6665DD;
-
+$range-border-s-background: #dbdcde;
+$range-border-r-background: #dbdcde;
 
 /* Other variables */
 
@@ -39,6 +42,7 @@ $push-sizes: (
         xxs: (
                 desktop: 16px),
         xs: (
-                desktop: 24px,
-                tablet: 16px)
+                desktop: 24px),
+        s: (
+                desktop: 32px)
 );

@@ -1,0 +1,42 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        position: relative;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        transition: all .2s;
+    }
+    
+    
+    &:active,
+    &:focus {
+        outline: none;  
+    }
+    
+    &--white {
+        background-color: $color-background-primary;
+        color: $color-text-primary;
+        border: 1px solid $color-elements-border;
+
+        &:hover {
+            background-color: $color-text-highlight-light;
+            color: $color-background-primary;
+        }
+    }
+
+    &--green {
+        background-color: $color-input-highlight;
+        color: $color-background-primary;
+        border: 1px solid $color-input-highlight;
+
+        &:hover {
+            background-color: $color-background-primary;
+            color: $color-input-highlight;
+        }
+    }
+}

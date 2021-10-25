@@ -10,6 +10,12 @@
   }
 }
 
+@mixin mid-tablet-down {
+  @media screen and (max-width: #{$mid-tablet-width}) {
+    @content;
+  }
+}
+
 @mixin tablet-down {
   @media screen and (max-width: #{$tablet-width}) {
     @content;
@@ -90,4 +96,19 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@mixin highlightTabItem {
+  color: $color-text-highlight-dark;
+  background-color: $color-background-primary;
+  border: 1px solid $color-border;
+  border-bottom: none;
+  z-index: 9;
+}
+
+@mixin showTabContent {
+  opacity: 1;
+  height: 100%;
+  visibility: visible; 
+  transform: translateX(0);
 }

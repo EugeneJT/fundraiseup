@@ -1,31 +1,41 @@
 .request {
     display: flex;
 
-    @include mob-down {
+    @include tablet-down {
         flex-direction: column;
     }
     
     &__item {
         overflow-x: hidden;
 
-        @include mob-down {
+        @include tablet-down {
             display: flex;
             justify-content: space-between;
 
+        }
+        &:first-child {
+            @include tablet-down {
+                padding-top: 8px;
+            }
+        }
+        &:last-child {
+            @include tablet-down {
+                padding-bottom: 8px;
+            }
         }
         &:not(:last-child) {
             border-right: 1px solid $color-border;
             padding-right: 34px;
             margin-right: 32px;
 
-            @include mob-down {
+            @include tablet-down {
                 border-right: none;
                 border-bottom: 1px solid $color-border;
-                padding: 0 0 34px;
-                margin: 0 0 32px;
+                padding-right: 0;
+                padding-bottom: 16px;
+                margin: 0 0 16px;
             }
         }
-
     }
 
     &__link {
@@ -34,6 +44,7 @@
             position: relative;
             color: $color-link;
             text-decoration: none;
+            overflow: hidden;
 
             &::after {
                 content: "";
@@ -48,7 +59,7 @@
 
             &:hover {
                 &::after {
-                    transform: translateX(-100%);
+                    transform: translateX(-101%);
                 }
             }
         }
