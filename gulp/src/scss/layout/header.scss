@@ -1,8 +1,0 @@
-.header {
-    &__item {
-        &:first-child {
-            padding: 28px 0;
-            @include border-bottom;
-        }
-    }
-}
